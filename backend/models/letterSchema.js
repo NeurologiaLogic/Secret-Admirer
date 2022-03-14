@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const letter = new mongoose.Schema({
-  title: { type: String, required: true },
   slug: { type: String, required: true },
-  tips: { type: String},
   content: { type: String, required: true },
+  password:{ type: String, required: true },
+  type:{ type: String, required: true },
+  hint: { type: String},
   // html: { type: String, required: true },
 });
 module.exports = mongoose.model("letter", letter);

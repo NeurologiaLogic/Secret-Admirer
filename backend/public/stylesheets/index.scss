@@ -1,14 +1,16 @@
+@import "_LandingPage.scss";
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 
-.image1{
+.image1 {
   background-image: url(../Assets/view.png);
-  width:300px;
-  height:300px;
+  width: 300px;
+  height: 300px;
 }

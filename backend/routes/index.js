@@ -1,16 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
-const qrCode = require('qrCode');
+const qrCode = require("qrCode");
 // const { generateKeyPair } = require("crypto");
 require("dotenv").config();
 const {
   register,
   login,
-  logout, 
-  articles,
-  createArticle,
-  articlesSearch,
+  logout,
+  createLetter,
+  viewLetter,
 } = require("../validate/link");
 // const { getQr, data } = require("../validate/generateQr");
 // const session = require("../models/sessions");
@@ -34,26 +33,34 @@ router.post("/register", register);
 router.post("/logout", logout);
 
 //NEW_ARTICLE
-router.post("/create", createArticle);
+router.post("/create", createLetter);
+
+//viewLetter
+// router.post("/create", viewLetter);
 
 //ARTICLE OPEN
-router.get("/posts/:slug", articlesSearch);
+router.get("/letter/:slug", viewLetter);
 
 //ARTICLE HOME
-router.get("/posts", articles);
+// router.get("/posts", articles);
 
 //ejs test
 router.get("/", async (req, res) => {
   //   res.locals.name = req.session.name;
   res.locals.name = await "patrick";
-  // await getQr("patrick");
-  // await console.log(data);
-  // await res.render("LandingPage", { data: data })
-  await qrCode.toDataURL(res.locals.name)
-  .then(reslt=>{
-    res.render("LandingPage", { data: reslt });
-  })
-  .catch(err=>{err})
+  await qrCode
+    .toDataURL(res.locals.name)
+    .then((reslt) => {
+      res.render("LandingPage", {
+        data: reslt,
+        content: content,
+        hint: hint,
+        password: password,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 //generate Qr

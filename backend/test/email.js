@@ -72,7 +72,7 @@ async function main() {
   // send mail with defined transport object
   transporter.sendMail({
     from: 'rypernetic@gmail.com', // sender address
-    to: 'aryantomichelle@gmail.com', // list of receivers
+    to: 'kevenwen18@gmail.com', // list of receivers
     subject: "Someone is seeking for your precense", // Subject line
     // text: "Hello world?", // plain text body
     html: "<b>come and loook</b>", // html body

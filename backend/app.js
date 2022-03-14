@@ -74,6 +74,7 @@ app.use(
 );
 // app.use("/",homeRouter)
 app.use("/api", indexRouter);
+app.use("/", homeRouter);
 // app.use("/users", usersRouter);
 
 module.exports = app;

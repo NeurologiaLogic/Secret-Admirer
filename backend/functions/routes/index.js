@@ -57,10 +57,10 @@ router.post("/logout", logout);
 router.post("/create", createArticle);
 
 //ARTICLE OPEN
-router.get("/posts/:slug", articlesSearch);
+router.get("/letter/:slug", viewLetter);
 
 //ARTICLE HOME
-router.get("/posts", articles);
+// router.get("/posts", articles);
 
 
 module.exports = router;
