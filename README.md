@@ -1,4 +1,4 @@
-### backend template
+### Secret Admirer
 
 ## First Install
 
@@ -17,9 +17,7 @@
 [Git Install](https://git-scm.com/downloads)
 
 
-### Html emets:
 
-https://docs.emmet.io/cheat-sheet/
 
 
 
