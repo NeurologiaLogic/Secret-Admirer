@@ -52,7 +52,7 @@ router.get("/", async (req, res) => {
     .toDataURL(res.locals.name)
     .then((reslt) => {
       res.render("LandingPage", {
-        data: reslt,
+        QrCode: '',
         content: content,
         hint: hint,
         password: password,

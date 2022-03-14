@@ -10,10 +10,8 @@ const {
   logout,
   createLetter,
   viewLetter,
+  nodeMailer
 } = require("../validate/link");
-// const { getQr, data } = require("../validate/generateQr");
-// const session = require("../models/sessions");
-// const mongoose = require("mongoose");
 // const csrf = require("csrf");
 // const csrfProtection = csrf({cookie:{httpOnly: true}})
 
@@ -35,26 +33,22 @@ router.post("/logout", logout);
 //NEW_ARTICLE
 router.post("/create", createLetter);
 
-//viewLetter
-// router.post("/create", viewLetter);
+//send email
+router.post("/email",nodeMailer)
 
 //ARTICLE OPEN
-router.get("/posts/:slug", viewLetter);
+router.get("/letter/:slug", viewLetter);
 
 //ARTICLE HOME
 // router.get("/posts", articles);
 
 //ejs test
 router.get("/", async (req, res) => {
-  //   res.locals.name = req.session.name;
   res.locals.name = await "patrick";
-  // await getQr("patrick");
-  // await console.log(data);
-  // await res.render("LandingPage", { data: data })
   await qrCode
     .toDataURL(res.locals.name)
     .then((reslt) => {
-      res.render("LandingPage", { data: reslt });
+      res.render("LandingPage", { QrCode: "" });
     })
     .catch((err) => {
       err;

@@ -20,47 +20,59 @@
     <main class ="LandingPage">
       <div class="center">
         <!-- start forms -->
-        <form action="https://localhost:6969/api/create" method="POST">
-
-              <textarea id="story" name="content"
-                        rows="20" cols="100" value ="Dear"></textarea>
+        <form action="#">
+              <textarea id="content" name="content" class="content"
+                        rows="20" cols="100" required>Dear</textarea>
               <div class="bottom-button">
                 <label class="boy-girl-switch">
                   <input type="checkbox" class = "switcher" name ="type">
                   <span class="slider round"></span>
                 </label>
                 <button id="send-mail" type = "button">
-
                   Send Mail
                 </button>
               </div>
+              <!-- trash -->
+              <!-- <input type="email" class = "emil">
+              <button class = "checkval" type="button">Check Val</button> -->
+
               <!-- hidden -->
-              <div class="centerSender">
-                <div class="hidden" hidden >
-                    <label class="hidden-label" for="#password">Sender</label>
-                    <input class="hidden-input"type="text" name="password" id="#password">
-                    <label class="hidden-label" for="#hints" >Hints (Optional)</label>
-                    <input class="hidden-input"type="text" name="hint" id="#hints">
-                    <div class="flex-end">
-                      <button type="submit" class="submit"><span>Next</span></button>
+              <div class="centerSender" >
+                <div id="hidden"hidden>
+                    <!-- section1 -->
+                    <div id="section1">
+                      <label class="hidden-label" for="password" >Sender</label>
+                      <input class="hidden-input password"type="text" required name="password" id="password">
+                      <label class="hidden-label" for="hints">Hints (Optional)</label>
+                      <input class="hidden-input hints"type="text" required name="hint" id="hints">
+                      <div class="flex-end">
+                        <button type="button" class="submit"><span>Next</span></button>
+                      </div>
                     </div>
-                </div>
+                    <!-- end section 1 -->
+                    <!-- start section 2 -->
+                    <div class="hidethis" hidden>
+                          <div id="section2">
+                            <div class="loading" >
+                            </div>
+                            <img class = "QrCode" alt="qrcode">
+                            <h1 for="">Save Qr Code</h1>
+                            <h3 for="">Or</h3>
+                            <input type="email" class = "emil-receiver" required placeholder="SecreteAdmirers@gmail.com">
+                            <div class="button-wrapper-middle">
+                            <button class = "email-sender" type="button">Send</button>
+                          </div>
+                        </div>
+                        </div>
+                      <!-- end session 2 -->
               </div>
 
-              <!-- how to fix this shit -->
-              <!-- <div class="hidden" hidden>
-                <img src=rCode alt="qrcode" default="#">
-                <label for="">Save Qr Code</label>
-                <label for="">Or</label>
-                <input type="email" placeholder="SecreteAdmirers@gmail.com">
-                <button>Send</button>
-              </div> -->
-              <!-- end of hidden -->
-          <!-- <button type="submit"><span> Hi</span>Send Mail</button> -->
+              </div>
+              </div>
         </form>
         <!-- end form -->
       </div>
     </main>
   </body>
   <script src = "./mechanic/LandingPage.js"></script>
-</html> -->
+</html>

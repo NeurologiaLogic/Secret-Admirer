@@ -227,7 +227,7 @@ button {
   padding: 20px;
 }
 
-.hidden {
+#hidden {
   position: absolute;
   width: 100%;
   padding: 30px;
@@ -242,7 +242,7 @@ button {
           box-shadow: 0px 4px 145px rgba(0, 0, 0, 0.15);
 }
 
-.hidden-label {
+#section1 .hidden-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,7 +254,7 @@ button {
   text-align: left;
 }
 
-.hidden-input {
+#section1 .hidden-input {
   width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,12 +266,12 @@ button {
   margin: 15px auto;
 }
 
-.flex-end {
+#section1 .flex-end {
   width: 100%;
   position: relative;
 }
 
-.flex-end .submit {
+#section1 .flex-end .submit {
   height: auto;
   background-color: #f58da8;
   right: 0;
@@ -280,36 +280,111 @@ button {
   position: absolute;
 }
 
-.flex-end .submit span {
+#section1 .flex-end .submit span {
   position: relative;
   z-index: 2;
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-.flex-end .submit:after {
+#section1 .flex-end .submit:after {
   right: 0;
   top: 0;
   position: absolute;
   content: "";
   background-color: white;
   width: 100%;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   height: 100%;
 }
 
-.flex-end .submit:hover {
+#section1 .flex-end .submit:hover {
   color: #fff;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-.flex-end .submit:hover:after {
+#section1 .flex-end .submit:hover:after {
   width: 0%;
   height: 100%;
+}
+
+.hidethis {
+  padding: 10px;
+}
+
+.hidethis #section2 {
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hidethis #section2 .QrCode {
+  margin: 5px 10px;
+}
+
+.hidethis #section2 h1 {
+  text-align: center;
+  font: 1.5rem;
+  margin: 5px 10px;
+}
+
+.hidethis #section2 h3 {
+  margin: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font: 0.5rem;
+}
+
+.hidethis #section2 .emil-receiver {
+  margin: 2px 10px;
+}
+
+.hidethis #section2 .button-wrapper-middle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hidethis #section2 .email-sender {
+  margin: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  width: 50%;
+  height: 3rem;
+  font-weight: bold;
+  background-color: #f58da8;
+  color: white;
+  border: none;
+}
+
+.hidethis #section2 .email-sender:hover {
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  width: 100%;
+  background-color: #f58da8;
 }
 
 body {
