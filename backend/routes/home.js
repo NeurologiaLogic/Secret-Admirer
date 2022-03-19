@@ -51,9 +51,13 @@ router.get("/", async (req, res) => {
       res.render("LandingPage", { QrCode: "" });
     })
     .catch((err) => {
-      err;
+      console.log("🚀 ~ file: home.js ~ line 56 ~ router.get ~    err",    err)
     });
 });
+
+router.get("/pass",async (req,res)=>{
+  res.render("")
+})
 
 //generate Qr
 // router.get("/qr",writePage)

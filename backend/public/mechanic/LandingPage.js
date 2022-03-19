@@ -40,23 +40,19 @@ $(".content").click((e) => {
   $("#hidden").attr("transition", "all .10s ease-in-out");
 });
 
-
 //get qr code from fetching data
 $(".submit").click((e) => {
   e.preventDefault();
   let content = document.querySelector(".content").value;
   let password = document.querySelector(".password").value;
   let hints = document.querySelector(".hints").value;
-  let types = document.querySelector(".switcher").value;
 
   // alert(content);
-
-  if (typeof types === "undefined") {
-    types = "off";
-  }
+  let types = temp ? "girls" : "boys";
+  // console.log(temp);
   console.log({ content, password, hints, types });
   $("#section1").attr("hidden", true);
-  //play loading dan fetch
+  // play loading dan fetch
   fetch("https://localhost:6969/create", {
     method: "POST", // or 'PUT'
     headers: {
@@ -104,3 +100,4 @@ $(".email-sender").click((e) => {
       console.error("Error:", error);
     });
 });
+
