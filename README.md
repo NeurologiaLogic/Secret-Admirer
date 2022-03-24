@@ -9,8 +9,8 @@
 
 - install Node
 - install git
-- Add .env file in the backend file with name Db="your database Key"
-
+- Add .env file in the backend file with name Db="your database Key", PORT="Port you want to use", And salt = "Add anything" 
+- Add SSL Key and Cert to the /bin/www.js 
 ### Link
 
 [Node Install](https://nodejs.org/en/download/)
