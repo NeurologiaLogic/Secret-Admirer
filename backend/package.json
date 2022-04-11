@@ -23,7 +23,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "firebase": "^9.6.7",
-    "firebase-functions": "^3.18.1",
+    "firebase-functions": "^3.19.0",
     "https": "^1.0.0",
     "jsdom": "^19.0.0",
     "jsonwebtoken": "^8.5.1",
